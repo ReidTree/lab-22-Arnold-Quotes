@@ -16,7 +16,13 @@ $scope.moreArnold = function(){
     $scope.quote = "roll-in";
     console.log($scope.arnold);
   });
-
+  $http({
+    method: 'GET',
+    url: '/arnold/pop'
+  }).then(function(response) {
+    $scope.pop = response.data[Math.floor(Math.random()*response.data.length)];
+    console.log($scope.pop);
+  });
 
 }
 

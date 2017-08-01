@@ -57,7 +57,7 @@ p {
 }
 .imgShow {
   animation-name: grow;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
 }
 @keyframes grow {
@@ -78,27 +78,67 @@ p {
   position: absolute;
   font-family: 'PT Serif', serif;
   top: 45%;
-  right: 12%;
+  right: 7%;
   color: white;
   padding: 2% 13%;
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(0,0,0,1);
   visibility: visible;
   font-size: 1.5vw;
 }
 
 .imgSrc {
   width: 60%;
-  margin: 0 auto;
+  margin: 2% auto;
 }
 
 body {
   width: 100%;
   text-align: center;
 }
+.cs1, .cs2, .cs3 {
+  position: absolute;
+}
+
+.cs1 {
+  right: -3%;
+  bottom: -4%;
+  -webkit-animation: 1.5s linear 0s 1 alternate cs1;
+           animation: 1.5s linear 0s 1 alternate cs1;
+ }
+
+ @-webkit-keyframes cs1 { from { margin-bottom: -40%; } to { margin-bottom: 0%; }  }
+         @keyframes cs1 { from { margin-bottom: -40%; } to { margin-bottom: 0%; }  }
+
+ .cs2 {
+   bottom: 50%;
+   right: 0%;
+   margin: 0%;
+   transform: rotate(-90deg);
+   -webkit-animation: 1s linear 0s 1 alternate cs2;
+            animation: 1s linear 0s 1 alternate cs2;
+  }
+
+  @-webkit-keyframes cs2 { from { margin-right: -40%; } to { margin-right: 0%; }  }
+          @keyframes cs2 { from { margin-right: -40%; } to { margin-right: 0%; }  }
+.cs3 img {
+  width: 150px;
+}
+.cs3 {
+  right: 85%;
+  bottom: 0%;
+  z-index: 1;
+  -webkit-animation: 4s linear 0s 1 alternate splash;
+           animation: 4s linear 0s 1 alternate splash;
+ }
+
+ @-webkit-keyframes splash { from { margin-right: -100%; } to { margin-right: 0%; }  }
+         @keyframes splash { from { margin-right: -100%; } to { margin-right: 0%; }  }
+
+
 div.roll-in, .blank {
   left: 0%;
-  -webkit-animation: 2s linear 0s 1 alternate move_eye;
-           animation: 2s linear 0s 1 alternate move_eye;
+  -webkit-animation: 1s linear 0s 1 alternate move_eye;
+           animation: 1s linear 0s 1 alternate move_eye;
  }
 
  @-webkit-keyframes move_eye { from { margin-left: -40%; } to { margin-left: 0%; }  }

@@ -1,5 +1,15 @@
 var express = require('express');
 var router = express.Router();
+var pop = [{
+  "img": "http://www.stickpng.com/assets/thumbs/584d901e367b6a13e54477f0.png",
+  "class": "cs1"
+},{
+  "img": "https://s.tcdn.co/059/b52/059b5228-b152-3981-9e4e-307836b89606/192/3.png",
+  "class": "cs2"
+},{
+  "img": "https://www.genuinecoa.com/webassist/plugins/catalog/scripts/image_cache/imagesupload/crop/Arnold%20Schwarzenegger_w300_h503/Arnold%20Schwarzenegger_11181134.png",
+  "class": "cs3"
+}];
 
 var arnold = [
   { 'quote': "Your clothes, give them to me, now!",
@@ -35,6 +45,9 @@ router.get('/quotes', function (req, res) {
   res.json(arnold);
 });
 
+router.get('/pop', function (req, res) {
+  res.json(pop);
+});
 
 
 module.exports = router;
