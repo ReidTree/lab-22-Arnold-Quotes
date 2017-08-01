@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="mod">
+  <head>
+    <meta charset="utf-8">
+    <title>Arnold Quotes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif|Paytone+One" rel="stylesheet">
+  </head>
+  <body ng-controller="ctrl">
+    <div class="white">
+      <h2>Arnold Once Said</h2>
+    </div>
+      
+    <div class="arnFace" ng-click="moreArnold()">
+      <img id="face" src="http://www.pngmart.com/files/4/Arnold-Schwarzenegger-PNG-Clipart.png" alt="">
+      <span id="click">click me!</span>
+    </div>
+    <!-- <button type="button" ng-click="moreArnold()">Give me Arnold</button> -->
+    <div class="blank">
+
+    </div>
+    <div>
+      <img class="imgSrc {{imgHide}}" src="{{ arnold.img }}" alt="">
+    </div>
+
+    <div class="qWrap {{quote}}">
+      <div class="quote">
+        <p>{{ arnold.quote }}</p>
+      </div>
+      <div class="quoteMovie">
+        <p>{{ arnold.movie }}</p>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js" charset="utf-8"></script>
+    <script src="script.js" charset="utf-8"></script>
+  </body>
+</html>

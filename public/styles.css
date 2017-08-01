@@ -1,0 +1,105 @@
+.arnFace {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 10%;
+}
+body {
+  background: repeating-linear-gradient(to left,
+      rgba(0,0,0,0.5), rgba(200,0,124,.3) 5px, white 1px, white 10px);
+}
+.white {
+  width: 40%;
+  padding: 0.5% 3%;
+  background-color: white;
+  margin: 1% auto;
+  border-left: 5px solid rgba(0,0,0,.4);
+  border-bottom: 5px solid rgba(0,0,0,.3);
+  box-shadow: -5px 5px 1px rgba(200,0,124,.5);
+}
+h2 {
+  font-family: 'Paytone One', sans-serif;
+  text-align: center;
+  margin: 0;
+}
+#face {
+  filter: saturate(0%);
+  width: 100%;
+}
+#face:hover {
+  filter: saturate(100%);
+  cursor: pointer;
+}
+p {
+  margin: 3%
+  font-family: 'PT Serif', serif;
+}
+.arnFace:hover #click {
+  visibility: hidden;
+}
+.qWrap {
+  position: absolute;
+  top: 30%;
+  width: 30%;
+  left: -50%;
+}
+.quote, .quoteMovie {
+  padding: 0.1% 10.3%;
+  color: white;
+  margin: 6% 0px;
+  text-align: -webkit-right;
+  padding-right: 2%;
+  border-right: 3px solid rgba(255,255,255,0.5);
+  background-color: rgba(0,0,0,0.8);
+}
+.imgHide {
+  visibility: hidden;
+}
+.imgShow {
+  animation-name: grow;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes grow {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.quoteMovie {
+  width: 80%;
+  font-size: 2vw;
+}
+.quote {
+  width: 100%;
+  font-size: 3vw;
+}
+
+#click {
+  position: absolute;
+  font-family: 'PT Serif', serif;
+  top: 45%;
+  right: 12%;
+  color: white;
+  padding: 2% 13%;
+  background-color: rgba(0,0,0,.5);
+  visibility: visible;
+  font-size: 1.5vw;
+}
+
+.imgSrc {
+  width: 60%;
+  margin: 0 auto;
+}
+
+body {
+  width: 100%;
+  text-align: center;
+}
+div.roll-in, .blank {
+  left: 0%;
+  -webkit-animation: 2s linear 0s 1 alternate move_eye;
+           animation: 2s linear 0s 1 alternate move_eye;
+ }
+
+ @-webkit-keyframes move_eye { from { margin-left: -40%; } to { margin-left: 0%; }  }
+         @keyframes move_eye { from { margin-left: -40%; } to { margin-left: 0%; }  }
